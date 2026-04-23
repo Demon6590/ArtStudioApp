@@ -1,18 +1,23 @@
-﻿namespace DefaultNamespace;
+﻿using System;
+
+namespace DefaultNamespace;
 
 public record ProjectTeamMember(){
-    private int ProjectId { get; init; }
-    string ProjectName{ get; init; }
-    string Deadline{ get; init; }
-    string? Nickname{ get; init; }
-    string? Roles{ get; init; }
-    string? LastName{ get; init; }
-    string? FirstName{ get; init; }
-    string? Patronymic{ get; init; }
-    string? Series{ get; init; }
-    string? Number{ get; init; }
-    string? IssuedBy{ get; init; }
-    string? DateOfIssue{ get; init; }
-    string? DepartmentCode{ get; init; }
-    string? ResidentialAddress{ get; init; }
+    public int ProjectId { get; init; }
+    public string ProjectName{ get; init; }
+    public DateOnly Deadline{ get; init; }
+    public string? Nickname{ get; init; }
+    public string? Roles{ get; init; }
+    public string? LastName{ get; init; }
+    public string? FirstName{ get; init; }
+    public string? Patronymic{ get; init; }
+    public string? Series{ get; init; }
+    public string? Number{ get; init; }
+    public string? IssuedBy{ get; init; }
+    public DateOnly? DateOfIssue{ get; init; }
+    public string? DepartmentCode{ get; init; }
+    public string? ResidentialAddress{ get; init; }
+
+    public override string ToString() =>
+        $"#{ProjectId} {ProjectName} \t {Deadline} \t {Nickname} \t {Roles}";
 };
