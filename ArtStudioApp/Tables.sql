@@ -34,11 +34,11 @@ CREATE TABLE table_project_activity
     id          INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     executor_id INTEGER NOT NULL,
     project_id  INTEGER NOT NULL,
-    roles TEXT NOT NULL CHECK ( roles != ''),
+    roles       TEXT    NOT NULL CHECK ( roles != ''),
     FOREIGN KEY (project_id) REFERENCES table_projects (id),
     FOREIGN KEY (executor_id) REFERENCES table_personal_informations (id)
 
 
 );
-
     
+        
